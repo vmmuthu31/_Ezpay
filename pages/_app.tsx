@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       await authProvider.init()
         const user = await authProvider.getUser();
      //   setUserInfo(user);
-        console.log(user.id)
+        console.log("userid",user.id)
       } catch (error) {
         console.error("Error fetching user info:", error);
       }

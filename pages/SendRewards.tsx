@@ -13,7 +13,7 @@ function SendRewards() {
     const [currentEmail, setCurrentEmail] = useState('');
 
     function handleSubmit() {
-        toast.success("Wow so easy!");
+        toast.success("Claimed  Successfully!");
 
         router.push("/Home");
     }
@@ -89,6 +89,7 @@ function SendRewards() {
             </div>
             <button onClick={handleSubmit} className="bg-[#FF6B00] px-3 py-2 rounded-lg text-white font-semibold text-xl">Submit</button>
           </div>
+          <ToastContainer />
             </div>
         </div>
     </div>
