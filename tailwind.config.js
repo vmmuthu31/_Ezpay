@@ -9,7 +9,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "gradient-start": "#FF6B00",
+        "gradient-middle": "#8A00DE",
+        "gradient-end": "#00A070",
+      },
+    },
   },
   plugins: [],
 };
