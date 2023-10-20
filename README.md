@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<img src="./public/EzpayLogo.png" class="center"/>
 
-## Getting Started
+# Welcome to EzPay
+**# Welcome to EzPay** -  **Send Receive Move** Red envelopes seamlessly.
 
-First, run the development server:
+## Problem Statement
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Our solution
+We created a dApp that can enable users send, receive red envelopes across your favorite chains.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How It's Made
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+###### Architecture
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Wormhole - For cross chain token exchange
+- Anima.io - Decentralized ID Protocol
+- Polygon/Avax Fuji - Contract deployment
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+###### Technologies
 
-## Learn More
+- UI - Next.js, React
+- Smart Contracts - Solidity 
+- Backend - TypeScript
+- Testnet - Mumbai Polygon, Avalanche Fuji testnet
+- Tools - Remix, Metamask
+- Art Design - Adobe PhotoShop, Figma
 
-To learn more about Next.js, take a look at the following resources:
+## Related source code rep
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* dApp - https://github.com/vmmuthu31/_Ezpay
+* Smart Contracts - https://github.com/vmmuthu31/_Ezpay/contracts/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Kalvi Demo URL
+* Vercel - https://ezpay-pi.vercel.app/
 
-## Deploy on Vercel
+## Developers
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Ram Vittal (ramvittal@gmail.com)
+* Vairamuthu (mvairamuthu2003@gmail.com)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## References
+
+https://en.wikipedia.org/wiki/WeChat_red_envelope
+https://www.fastcompany.com/3065255/china-wechat-tencent-red-envelopes-and-social-money
+https://www.thewechatagency.com/creating-your-own-red-packet-cover-on-wechat-the-ultimate-guide/
+
