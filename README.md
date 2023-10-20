@@ -30,6 +30,14 @@ We created a dApp that can enable users send, receive red envelopes across your 
 * dApp - https://github.com/vmmuthu31/_Ezpay
 * Smart Contracts - https://github.com/vmmuthu31/_Ezpay/contracts/
 
+## Smart Contract Address
+
+* Source Token - Polygon Mumbai - https://mumbai.polygonscan.com/address/0x4d67733130EDC90cD571cB5cA8DB968f2571196B
+* Destination Token - Avalanche Fuji - https://testnet.snowtrace.io/address/0x5e6f29Ab2c19323B6715ca7E3892330a84749004#internaltx
+* Test USDC Token - https://mumbai.polygonscan.com/address/0xbe49ac1EadAc65dccf204D4Df81d650B50122aB2
+* Test USDC Token Wormhole - https://testnet.snowtrace.io/token/0x9a6ce82ac492f85b9ac951fa18b02b3b86f5592a?a=0x0138bD666fA3Cc835B4513f57e97a800958e061f
+* Wormhole Transactions - https://wormholescan.io/#/tx/0x554de52f16cab54143169523863ec78f06277c840b012422820dd593636880c4?network=TESTNET
+
 ## EzPay Demo URL
 * Vercel - https://ezpay-pi.vercel.app/
 
