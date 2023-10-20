@@ -5,7 +5,7 @@ import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { publicProvider } from "wagmi/providers/public";
 import type { AppProps } from "next/app";
 import { polygonMumbai } from "viem/chains";
-import { connectors } from "./utils/wallet";
+import { connectors } from "../utils/wallet";
 import React, {useState,useEffect} from 'react';
 import { AuthProvider } from "@arcana/auth";
 
