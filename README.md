@@ -40,7 +40,7 @@ We created a dApp that can enable users send, receive red envelopes across your 
 
 ## References
 
-https://en.wikipedia.org/wiki/WeChat_red_envelope
-https://www.fastcompany.com/3065255/china-wechat-tencent-red-envelopes-and-social-money
-https://www.thewechatagency.com/creating-your-own-red-packet-cover-on-wechat-the-ultimate-guide/
+* https://en.wikipedia.org/wiki/WeChat_red_envelope
+* https://www.fastcompany.com/3065255/china-wechat-tencent-red-envelopes-and-social-money
+* https://www.thewechatagency.com/creating-your-own-red-packet-cover-on-wechat-the-ultimate-guide/
 
