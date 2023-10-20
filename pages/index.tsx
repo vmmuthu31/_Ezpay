@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Navbar from "./Components/Navbar";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -12,14 +13,14 @@ const Home: NextPage = () => {
   }}>Unlock Infinite Possibilities</p>
       <p className="text-white font-semibold text-5xl">Reward, Share, and Claim Tokens Seamlessly!!</p>
       <p className="mx-80 text-white text-xl">EZPay, your gateway to a new world of token rewards and sharing. We&nbsp;ve made it easier than ever to show appreciation, send valuable tokens, and enjoy the benefits of a seamless rewards ecosystem.</p>
-      <button className="bg-[#FF6B00] px-3 py-2 rounded-lg text-white font-semibold text-xl">Get Started</button>
+      <Link href="/Register"><button className="bg-[#FF6B00] px-3 py-2 rounded-lg text-white font-semibold text-xl">Get Started</button></Link>
      </div>
      </div>
 
      <div className="py-2">
       <p className="text-4xl font-bold text-white text-center">Tokens : Send, Claim. <span className="text-orange-600">No Hassle!</span></p>
       <div className="flex  py-10  gap-5 mx-10 ">
-        <div className="flex rounded-xl bg-[#1e1333] border-gray-200 border border-opacity-40 border-gray-200 px-5  py-10 space-y-6">
+        <div className="flex rounded-xl bg-[#1e1333] border border-opacity-40 border-gray-200 px-5  py-10 space-y-6">
         <div>
         <p className="text-4xl px-10  text-white font-bold">Effortless Token Gifting</p>
         <p className="text-lg  px-10 pt-8 text-justify text-white font-semibold">Send tokens to up to 5 recipients in<br/> a matter of seconds. Choose the token<br/> type and amount, and let our platform handle<br/> the rest. Show your appreciation with a click.</p>
@@ -48,7 +49,7 @@ const Home: NextPage = () => {
         </div>
         <div className="flex rounded-xl bg-[rgb(30,19,51)] border-gray-200 border border-opacity-40 py-4 "> 
          <p className="text-2xl px-12 text-white font-bold">Watch what EZPay can do</p>
-         <p className="text-lg text-gray-800 bg-white px-3 py-2 rounded-lg font-semibold">Play Demo</p>
+         <p className="text-lg text-gray-800 bg-white px-3 py-1 rounded-lg font-semibold">Play Demo</p>
          </div>
         </div>
         </div>
