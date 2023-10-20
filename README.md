@@ -30,7 +30,7 @@ We created a dApp that can enable users send, receive red envelopes across your 
 * dApp - https://github.com/vmmuthu31/_Ezpay
 * Smart Contracts - https://github.com/vmmuthu31/_Ezpay/contracts/
 
-## Kalvi Demo URL
+## EzPay Demo URL
 * Vercel - https://ezpay-pi.vercel.app/
 
 ## Developers
