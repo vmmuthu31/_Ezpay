@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './Components/Navbar'
 import { useRouter } from 'next/router'
+import HomeNav from './Components/HomeNav'
 
 function ClaimRewards() {
   const router = useRouter()
@@ -10,7 +10,7 @@ function ClaimRewards() {
     }
   return (
     <div className="bg-[#090022] min-h-screen ">
-        <Navbar />
+        <HomeNav />
         <div className='py-16'>
             <p className='text-center text-3xl font-bold text-white'>Registration</p>
             <div className='bg-[#1C1D2E] rounded-xl mx-96'>
