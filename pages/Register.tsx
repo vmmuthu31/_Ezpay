@@ -1,7 +1,13 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
+import { useRouter } from 'next/router'
 
 function Register() {
+  const router = useRouter()
+
+    function Submit(){
+      router.push("/Home")
+    }
   return (
     <div className="bg-[#090022] min-h-screen ">
         <Navbar />
@@ -18,7 +24,7 @@ function Register() {
                     <input className='h-10 text-white rounded-lg bg-transparent border border-gray-300 border-opacity-90  px-2' type="email"/>
                     
                     </div>
-                    <button className="bg-[#FF6B00] px-3 py-2 rounded-lg text-white font-semibold text-xl">Submit</button>
+                    <button onClick={Submit} className="bg-[#FF6B00] px-3 py-2 rounded-lg text-white font-semibold text-xl">Submit</button>
                 </div>
             </div>
         </div>
