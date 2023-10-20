@@ -3,6 +3,9 @@ import { useRouter } from 'next/router'
 import HomeNav from './Components/HomeNav'
 import {AiOutlinePlus } from "react-icons/ai"
 import {RxCross2} from "react-icons/rx"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function SendRewards() {
     const router = useRouter();
@@ -10,6 +13,8 @@ function SendRewards() {
     const [currentEmail, setCurrentEmail] = useState('');
 
     function handleSubmit() {
+        toast.success("Wow so easy!");
+
         router.push("/Home");
     }
 
