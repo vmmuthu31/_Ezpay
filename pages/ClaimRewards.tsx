@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ClaimBounty,getBountyAmount } from '../utils/Blockchain';
 import {CrossChainPay} from "../utils/EazyPay";
 
-function SendRewards() {
+function ClaimRewards() {
     const [isConfirmed, setIsConfirmed] = useState(false);
     const [link, setLink] = useState("");
     const [claimAmount, setClaimAmount] = useState('')
@@ -100,4 +100,4 @@ setClaimAmount(res.toNumber())
     )
 }
 
-export default SendRewards;
+export default ClaimRewards;
