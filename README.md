@@ -26,6 +26,9 @@ KYC using DID Protocol
 
 ## How It's Made
 
+###### Flow overview
+<img src="./public/FlowDiagram.png" class="center"/>
+
 ###### Architecture
 
 - Wormhole - For cross chain token exchange
