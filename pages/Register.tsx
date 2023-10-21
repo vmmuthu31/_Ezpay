@@ -5,10 +5,19 @@ import { Personhood } from '@anima-protocol/personhood-sdk-react'
 import '@anima-protocol/personhood-sdk-react/style.css'
 import { useAccount, useSignMessage } from 'wagmi'
 
+import {RegisterUser} from "./../utils/Blockchain"
+
 function Register() {
+
+  const [Name, setName] = useState(''); // Initialize the state with an empty string
+  const [email, setEmail] = useState(''); // Initialize the state with an empty string
+
   const router = useRouter()
 
-    function Submit(){
+ async   function Submit(){
+const res = await RegisterUser({name:Name,email:email})
+
+console.log(res);
       router.push("/Home")
     }
     const { signMessageAsync } = useSignMessage()
@@ -79,7 +88,7 @@ function Register() {
                 <div className='flex rounded-lg my-10  flex-col space-y-7 py-10 mx-40'>
                     <div className='flex flex-col '>
                    <span className='px-6'> <label className='text-white absolute  top-[230px]  bg-[#1C1D2E] px-2 font-semibold' >Name</label></span>
-                    <input className='h-10 text-white rounded-lg bg-transparent border border-gray-300 border-opacity-90 px-2' type="text" />
+                    <input className='h-10 text-white rounded-lg bg-transparent border border-gray-300 border-opacity-90 px-2'  type="text" />
                     </div>
                     <div className='flex flex-col'>
                     <span className='px-6'> <label className='text-white absolute  top-[302px] bg-[#1C1D2E] font-semibold px-2' >Email</label></span>
