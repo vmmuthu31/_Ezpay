@@ -1,5 +1,5 @@
 import React ,{useEffect, useState,useCallback} from 'react'
-import Navbar from './Components/Navbar.jsx'
+import Navbar from './Components/Navbar'
 import { useRouter } from 'next/router'
 import { Personhood } from '@anima-protocol/personhood-sdk-react'
 import '@anima-protocol/personhood-sdk-react/style.css'

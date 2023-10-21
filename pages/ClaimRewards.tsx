@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import HomeNav from './Components/HomeNav';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { ClaimBounty,getBountyAmount } from '../utils/Blockchain';
+import { getBountyAmount } from '../utils/Blockchain';
 import {CrossChainPay} from "../utils/EazyPay";
 
 function ClaimRewards() {
