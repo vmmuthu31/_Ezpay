@@ -2,26 +2,43 @@ import React, { useState } from 'react';
 import HomeNav from './Components/HomeNav';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
+import { ClaimBounty,getBountyAmount } from '../utils/Blockchain';
+import {CrossChainPay} from "../utils/EazyPay";
 
 function SendRewards() {
     const [isConfirmed, setIsConfirmed] = useState(false);
     const [link, setLink] = useState("");
+    const [claimAmount, setClaimAmount] = useState('')
+    const [selectedToken, setSelectedToken] = useState('USDCP');
 
-    const handleConfirm = () => {
+    const handleConfirm = async () => {
+
+const res = await getBountyAmount({code:link});
+console.log(res);
+setClaimAmount(res.toNumber())
         // Simulate fetching data from the link
         setTimeout(() => {
             setIsConfirmed(true);
-        }, 1000); // 1 second delay for simulation
+        }, 10000); // 1 second delay for simulation
     }
     
-    function handleSubmit() {
+
+    const handleInputChange = (event:any) => {
+        setClaimAmount(event.target.value); // Update the state with the input's current value
+      };
+
+    async function handleSubmit() {
+        const email = "thiru"
+    // const res  = await ClaimBounty({code:link,email:email})
+    // console.log(res)
+    const res  = await CrossChainPay({amount:10000000000})
+    console.log(res)
+
         toast.success("Claimed Successfully!");
     }
 
     
-    function handleKeyPress(event) {
+    function handleKeyPress(event:any) {
         if (event.key === 'Enter') {
             handleConfirm();
         }
@@ -62,12 +79,13 @@ function SendRewards() {
                                 <div>
                                     <label className='text-white font-semibold'>Claim Token Rewards</label>
                                     <div className='flex space-x-3 justify-between'>
-                                        <input className='h-10 text-white w-full bg-[#1C1D2E] rounded-lg bg-transparent border border-gray-300 border-opacity-90 px-2' type="text"  />
-                                        <select className='px-2 h-10 border border-gray-500 text-white text-lg bg-[#1C1D2E] rounded-md ' >
-                                            <option>USDC</option>
-                                            <option>Ethereum</option>
-                                            <option>Aptos</option>
-                                            <option>Flow</option>
+                                        <input className='h-10 text-white w-full bg-[#1C1D2E] rounded-lg bg-transparent border border-gray-300 border-opacity-90 px-2' value={claimAmount} disabled  onChange={(e) => setClaimAmount(e.target.value)} type="text"  />
+                                        <select className='px-2 h-10 border border-gray-500 text-white text-lg bg-[#1C1D2E] rounded-md '  value={selectedToken}
+                                    onChange={(e) => setSelectedToken(e.target.value)} >
+                                        <option value="USDCP">USDC/Polygon</option>
+                                    <option value="Aptos">Aptos</option>
+                                    <option value="USDCA">USDC/Avax</option>
+                                    <option value="Ethereum">Ethereum</option>
                                         </select>
                                     </div>
                                 </div>
