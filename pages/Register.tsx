@@ -13,7 +13,7 @@ function Register() {
     }
     const { signMessageAsync } = useSignMessage()
     const [sessionId, setSessionId] = useState(null);
-  
+
     useEffect(() => {
       const initSession = async () => {
         if (sessionId) return;
@@ -87,7 +87,7 @@ function Register() {
                     
                     </div>
                     <Personhood
-        onFinish={shared}
+                             onFinish={shared}
         sessionId={sessionId}
         signCallback={sign}
         walletAddress={address}
