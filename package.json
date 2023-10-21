@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "type": "module",
   "dependencies": {
     "@anima-protocol/personhood-sdk-react": "^0.4.6",
     "@arcana/auth": "1.0.8",
@@ -28,6 +29,7 @@
     "web3": "^4.2.0"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.22.15",
     "@types/node": "20.8.7",
     "@types/react": "18.2.29",
     "@types/react-dom": "18.2.14",
