@@ -4,9 +4,25 @@
 **# Welcome to EzPay** -  **Send Receive Move** Red envelopes seamlessly.
 
 ## Problem Statement
+Digitizing Red Envelopes implementing Web3 is our core motto.
+We created a dApp that can enable users send, receive red envelopes across your favorite chains.
+
+Current Pain Points
+
+Distributing rewards in various token formats.
+
+Lack of flexibility, complexity, and error-prone.
+
+Scalabilty: Dealing with a large number of recipients.
 
 ## Our solution
 We created a dApp that can enable users send, receive red envelopes across your favorite chains.
+
+Easy, frictionless decentralized App
+
+Options to Receive rewards in your prefered chains
+
+KYC using DID Protocol
 
 ## How It's Made
 
