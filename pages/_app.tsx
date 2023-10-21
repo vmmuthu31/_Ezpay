@@ -32,8 +32,8 @@ const { chains, publicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'My RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
+  appName: 'EZpay',
+  projectId: 'vmmuthu31',
   chains
 });
 
