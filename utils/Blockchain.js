@@ -11,7 +11,7 @@ if (ethereum) {
 
 const Address = "0x113A45a91e62af960a1620a73cB574fC07120DeE";
 
-export const RegisterUser = async ({ name,email }) => {
+export const RegisterUser = async ({ name, email }) => {
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
@@ -22,33 +22,30 @@ export const RegisterUser = async ({ name,email }) => {
   console.log(signer);
   const Role = new ethers.Contract(Address, abi, signer);
   console.log(Role);
-  const tokenId = await Role.register(name,email);
+  const tokenId = await Role.register(name, email);
   console.log(tokenId);
   return tokenId;
 };
 
+export const SendBounty = async ({ amount, token, emails, nos }) => {
+  const provider =
+    window.ethereum != null
+      ? new ethers.providers.Web3Provider(window.ethereum)
+      : ethers.providers.getDefaultProvider();
 
-export const SendBounty = async ({ amount,token,emails,nos }) => {
-    const provider =
-      window.ethereum != null
-        ? new ethers.providers.Web3Provider(window.ethereum)
-        : ethers.providers.getDefaultProvider();
-  
-    console.log(provider);
-    const signer = provider.getSigner();
-    console.log(signer);
-    const Role = new ethers.Contract(Address, abi, signer);
-    console.log(Role);
-    const tokenId = await Role.sendBounty( amount,token,emails,nos,{
-      value: amount,
-    });
-    console.log(tokenId);
-    return tokenId;
-  };
+  console.log(provider);
+  const signer = provider.getSigner();
+  console.log(signer);
+  const Role = new ethers.Contract(Address, abi, signer);
+  console.log(Role);
+  const tokenId = await Role.sendBounty(amount, token, emails, nos, {
+    value: amount,
+  });
+  console.log(tokenId);
+  return tokenId;
+};
 
-export const ClaimBounty = async (
-    {code,email}
-) => {
+export const ClaimBounty = async ({ code, email }) => {
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
@@ -56,11 +53,11 @@ export const ClaimBounty = async (
   const signer = provider.getSigner();
 
   const Role = new ethers.Contract(Address, abi, signer);
-  const tokenId = await Role.claimBounty(code,email);
+  const tokenId = await Role.claimBounty(code, email);
   console.log(tokenId);
   return tokenId;
 };
-export const getUniqueCode = async ({email}) => {
+export const getUniqueCode = async ({ email }) => {
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
@@ -73,7 +70,7 @@ export const getUniqueCode = async ({email}) => {
 
 // getPlayerTotalDeposit;
 
-export const getBountyGetters = async ({code}) => {
+export const getBountyGetters = async ({ code }) => {
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
@@ -88,7 +85,7 @@ export const getBountyGetters = async ({code}) => {
   //console.log(tokenId);
   return tokenId;
 };
-export const getBountyAmount = async ({code}) => {
+export const getBountyAmount = async ({ code }) => {
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
@@ -103,7 +100,7 @@ export const getBountyAmount = async ({code}) => {
   //console.log(tokenId);
   return tokenId;
 };
-export const getBountyToken = async ({code}) => {
+export const getBountyToken = async ({ code }) => {
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
@@ -128,6 +125,3 @@ export const getPlayerDepositCount = async ({ address }) => {
   const tokenId = await Role.getPlayerDepositCount(address);
   return tokenId;
 };
-
-
-

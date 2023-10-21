@@ -1,11 +1,11 @@
 import React ,{useEffect, useState,useCallback} from 'react'
-import Navbar from './Components/Navbar'
+import Navbar from './Components/Navbar.jsx'
 import { useRouter } from 'next/router'
 import { Personhood } from '@anima-protocol/personhood-sdk-react'
 import '@anima-protocol/personhood-sdk-react/style.css'
 import { useAccount, useSignMessage } from 'wagmi'
 
-import {RegisterUser} from "./../utils/Blockchain"
+import {RegisterUser} from "../utils/Blockchain"
 
 function Register() {
 
