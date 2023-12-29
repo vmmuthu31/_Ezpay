@@ -2,7 +2,7 @@ import Web3 from "web3";
 import abi from "./abi.json";
 import { ethers } from "ethers";
 
-const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
+const isBrowser = () => typeof window !== "undefined";
 const { ethereum } = isBrowser();
 if (ethereum) {
   isBrowser().web3 = new Web3(ethereum);
@@ -51,7 +51,6 @@ export const ClaimBounty = async ({ code, email }) => {
       ? new ethers.providers.Web3Provider(window.ethereum)
       : ethers.providers.getDefaultProvider();
   const signer = provider.getSigner();
-
   const Role = new ethers.Contract(Address, abi, signer);
   const tokenId = await Role.claimBounty(code, email);
   console.log(tokenId);
@@ -68,21 +67,14 @@ export const getUniqueCode = async ({ email }) => {
   return tokenId;
 };
 
-// getPlayerTotalDeposit;
-
 export const getBountyGetters = async ({ code }) => {
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
       : ethers.providers.getDefaultProvider();
-
-  //console.log(provider);
   const signer = provider.getSigner();
-  //console.log(signer);
   const Role = new ethers.Contract(Address, abi, signer);
-  //console.log(Role);
   const tokenId = await Role.getBountyGetters(code);
-  //console.log(tokenId);
   return tokenId;
 };
 export const getBountyAmount = async ({ code }) => {
@@ -90,14 +82,10 @@ export const getBountyAmount = async ({ code }) => {
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
       : ethers.providers.getDefaultProvider();
-
-  //console.log(provider);
   const signer = provider.getSigner();
-  //console.log(signer);
   const Role = new ethers.Contract(Address, abi, signer);
-  //console.log(Role);
   const tokenId = await Role.getBountyAmount(code);
-  //console.log(tokenId);
+  console.log(tokenId);
   return tokenId;
 };
 export const getBountyToken = async ({ code }) => {
@@ -105,23 +93,19 @@ export const getBountyToken = async ({ code }) => {
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
       : ethers.providers.getDefaultProvider();
-
-  //console.log(provider);
   const signer = provider.getSigner();
-  //console.log(signer);
   const Role = new ethers.Contract(Address, abi, signer);
-  //console.log(Role);
   const tokenId = await Role.getBountyToken(code);
-  //console.log(tokenId);
   return tokenId;
 };
-export const getPlayerDepositCount = async ({ address }) => {
+
+export const registeredCads = async ({ address }) => {
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum)
       : ethers.providers.getDefaultProvider();
   const signer = provider.getSigner();
-  const Role = new ethers.Contract(Address, gamblingabi, signer);
-  const tokenId = await Role.getPlayerDepositCount(address);
+  const Role = new ethers.Contract(Address, abi, signer);
+  const tokenId = await Role.registeredCads(address);
   return tokenId;
 };

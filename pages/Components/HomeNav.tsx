@@ -11,6 +11,7 @@ function HomeNav() {
          <Link href="/">     <p>Home</p></Link>
          <Link href="/SendRewards"><p>Send Rewards</p></Link>
          <Link href="/ClaimRewards"><p>Claim Rewards</p></Link>
+       
             </div>
             <ConnectButton />
         </div>

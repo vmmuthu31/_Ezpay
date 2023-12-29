@@ -13,15 +13,31 @@ function SendRewards() {
     const [emails, setEmails] = useState([]);
     const [currentEmail, setCurrentEmail] = useState('');
 
+  
    async function handleSubmit() {
-        console.log('Token Amount:', tokenAmount);
-        console.log('Selected Token:', selectedToken);
-        console.log('Emails:', emails[0]);
-const res = await SendBounty({amount:tokenAmount,token:selectedToken, emails:emails,nos:1})
-console.log(res)
-        toast.success("Claimed Successfully!");
-        router.push("/Home");
+    console.log('Token Amount:', tokenAmount);
+    console.log('Selected Token:', selectedToken);
+    console.log('Emails:', emails);
+    
+    try {
+        const response = await fetch('http://localhost:8000/api/sendemail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                amount: tokenAmount,
+                token: selectedToken,
+                recipients: emails,
+            }),
+        });
+            toast.success("Emails sent successfully!");
+    } catch (error) {
+        console.error('Error:', error);
+        toast.error("An error occurred!");
     }
+}
+
 
     function handleAddEmail() {
         if (currentEmail) {

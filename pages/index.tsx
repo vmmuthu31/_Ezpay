@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         <p className="text-lg  px-10 pt-8 text-justify text-white font-semibold">Send tokens to up to 5 recipients in<br/> a matter of seconds. Choose the token<br/> type and amount, and let our platform handle<br/> the rest. Show your appreciation with a click.</p>
         </div>
         <div>
-          <img className="w-full h-60" src="https://s3-alpha-sig.figma.com/img/134f/d99f/6dd56306e302abb10310674489bf0d37?Expires=1698624000&Signature=TeEwLeBUI71clPZ5Pwez0mB7u1oRDUi~asqGEo1~Y0K2JcJyIlkcQBFV2n87kT1RZ~AYRuHO~fbbdz1LMOgvtQfz1ZuWnJurfku~~GaZT3vl99cRotNt9aOcjOhOtMPKc~z~9M~fqKVufl7kYvOKBOU9l7CPHhy-CmEcsdUeQQxYqyyKtIEMhGgyDWCXkzVBmb9IWfCPSghfb-iXQWX61YI8yws1oQraA3zDxKU-W1VjsVcsKhxaQS1lZfFLEiIm6zFuDcrPEQPn0ySHR6eYAaDNiRu85NyJ9iaQko7adUyOl-HqdzW1r66abimrRiikVdllYczV0ldwQ-GfSROnsw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+          <img className="w-full h-60" src="https://st4.depositphotos.com/37179350/38397/v/450/depositphotos_383979132-stock-illustration-reward-points-icon-vector-loyalty.jpg" />
         </div>
         </div>
         <div className="flex-1 rounded-xl bg-[#1e1333]  border-gray-200 border border-opacity-40 py-10 space-y-6 flex-col">

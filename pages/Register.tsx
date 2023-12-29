@@ -5,17 +5,17 @@ import { Personhood } from '@anima-protocol/personhood-sdk-react'
 import '@anima-protocol/personhood-sdk-react/style.css'
 import { useAccount, useSignMessage } from 'wagmi'
 
-import {RegisterUser} from "../utils/Blockchain"
+import { RegisterUser } from "../utils/Blockchain"
 
 function Register() {
 
-  const [Name, setName] = useState(''); // Initialize the state with an empty string
+  const [name, setName] = useState(''); // Initialize the state with an empty string
   const [email, setEmail] = useState(''); // Initialize the state with an empty string
 
   const router = useRouter()
 
  async   function Submit(){
-const res = await RegisterUser({name:Name,email:email})
+const res = await RegisterUser({name,email})
 
 console.log(res);
       router.push("/Home")
